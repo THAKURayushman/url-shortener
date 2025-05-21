@@ -1,4 +1,4 @@
-import { getShortUrl } from "../Dao/short_url.js";
+import { getShortUrl } from "../dao/short_url.js";
 import {
   createShortUrlWithoutUser,
   createShortUrlWithUser,

@@ -2,7 +2,7 @@ import {
   createUser,
   findUserByEmail,
   findUserByEmailByPassword,
-} from "../dao/user.dao.js";
+} from "../Dao/user.dao.js";
 import { ConflictError } from "../utils/errorHandler.js";
 import { signToken } from "../utils/helper.js";
 

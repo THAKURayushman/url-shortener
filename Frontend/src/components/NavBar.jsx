@@ -34,7 +34,7 @@ const Navbar = () => {
             {user ? (
               <div className="flex items-center space-x-4">
                 <span className="text-gray-700">
-                  Welcome, {user.user.name || user.user.email}
+                  Welcome, {user.name || user.email}
                 </span>
                 <button
                   onClick={onLogout}

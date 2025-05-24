@@ -23,12 +23,14 @@ export const logoutUser = async () => {
 };
 
 export const getCurrentUser = async () => {
-  try {
-    const { data } = await axiosInstance.get("/api/auth/me");
-    return data;
-  } catch (error) {
-    console.error("Error fetching user:", error);
-    return null; // So that JSON.parse(undefined) doesn't break the app
+  const res = await axiosInstance.get("/api/auth/me");
+
+  // Confirm the response is actually JSON:
+  if (res && res.data) {
+    return res.data;
+  } else {
+    console.error("Invalid response from /api/auth/me:", res);
+    throw new Error("Unexpected response from server");
   }
 };
 

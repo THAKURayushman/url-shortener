@@ -1,5 +1,5 @@
 import wrapAsync from "../utils/tryCatchWrapper.js"
-import { getAllUserUrlsDao } from "../dao/user.dao.js"
+import { getAllUserUrlsDao } from "../Dao/user.dao.js"
 
 export const getAllUserUrls = wrapAsync(async (req, res) => {
     const {_id} = req.user

@@ -15,7 +15,10 @@ dotenv.config("./.env");
 
 const app = express();
 
-const allowedOrigins = ["http://localhost:5174"];
+const allowedOrigins = [
+  "http://localhost:5174",
+  "https://url-shortener-4oyn.onrender.com",
+];
 app.use(
   cors({
     origin: function (origin, callback) {

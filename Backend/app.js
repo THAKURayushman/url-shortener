@@ -17,7 +17,7 @@ const app = express();
 
 const allowedOrigins = [
   "http://localhost:5174",
-  "https://url-shortener-4oyn.onrender.com",
+  "https://url-shortener-backend2.onrender.com",
 ];
 app.use(
   cors({

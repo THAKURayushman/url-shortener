@@ -23,8 +23,13 @@ export const logoutUser = async () => {
 };
 
 export const getCurrentUser = async () => {
-  const { data } = await axiosInstance.get("/api/auth/me");
-  return data;
+  try {
+    const { data } = await axiosInstance.get("/api/auth/me");
+    return data;
+  } catch (error) {
+    console.error("Error fetching user:", error);
+    return null; // So that JSON.parse(undefined) doesn't break the app
+  }
 };
 
 export const getAllUserUrls = async () => {

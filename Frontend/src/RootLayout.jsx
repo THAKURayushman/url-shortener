@@ -12,11 +12,12 @@ const RootLayout = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    const storedUser = localStorage.getItem("user");
-    if (storedUser) {
-      dispatch(login(JSON.parse(storedUser)));
-    }
-  }, [dispatch]);
+  const storedUser = localStorage.getItem("user");
+  if (storedUser && storedUser !== "undefined") {
+    dispatch(login(JSON.parse(storedUser)));
+  }
+}, [dispatch]);
+
 
   return (
     <>

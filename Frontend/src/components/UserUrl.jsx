@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { getAllUserUrls } from "../api/user.api";
 
-const url = VITE_FRONTEND_URL;
+const url = import.meta.env.VITE_FRONTEND_URL;
 
 const UserUrl = () => {
   const {

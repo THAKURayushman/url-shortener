@@ -18,7 +18,7 @@ const app = express();
 const allowedOrigins = ["http://localhost:5174"];
 app.use(
   cors({
-<<<<<<< HEAD
+
     origin: function (origin, callback) {
       // Allow requests with no origin (like mobile apps, curl)
       if (!origin) return callback(null, true);
@@ -30,10 +30,6 @@ app.use(
       return callback(null, true);
     },
     credentials: true,
-=======
-    origin: "https://url-shortener-4oyn.onrender.com", // your React app
-    credentials: true, // 👈 this allows cookies to be sent
->>>>>>> 4a5b3b33d7f25ef95d549671c4626cd16861a8ee
   })
 );
 
